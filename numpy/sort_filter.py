@@ -20,7 +20,6 @@ ar = np.array([1,2,3,4,5])
 print(np.searchsorted(ar,3))
 
 
-
 ######## FILTERING #########
 
 arr = np.array([20,30,40,50])
