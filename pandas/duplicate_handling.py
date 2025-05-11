@@ -8,10 +8,13 @@ print(data.duplicated())
 
 print()
 
+##### ALWAYS USE PRIMARY KEY TO HANDLE DUPLICATES
+
 #duplicate value in columm
 print(data["Countries"].duplicated())
 
 #count of duplicate data
 print(data["Countries"].duplicated().sum())
 
+#to remove duplicate values based on column name
 print(data.drop_duplicates("MOD 1 (10)"))
