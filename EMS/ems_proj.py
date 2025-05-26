@@ -1,4 +1,4 @@
-dict = {101 : {'name' : 'Sparsh', 'age' : 20, 'department' : 'SDE', 'salary' : 10000000}, 102 : {'name' : 'Jiya', 'age' : 20, 'department' : 'SWE', 'salary' : 90000}, 103 : {'name' : 'Jiya', 'age' : 21, 'department' : 'HR', 'salary' : 50000}}
+dict = {101 : {'name' : 'Sparsh', 'age' : 20, 'department' : 'SDE', 'salary' : 10000000}, 102 : {'name' : 'Jiya', 'age' : 20, 'department' : 'SWE', 'salary' : 90000}, 103 : {'name' : 'Vishal', 'age' : 21, 'department' : 'HR', 'salary' : 50000}}
 
 def option_menu():
     print("1 -> Add employee")
@@ -25,14 +25,14 @@ def add_emp():
 
 
 def view_employees():
-    if(len(dict) == 0):
+    if len(dict) == 0:
         print("No employees available")
         return
-       
-    print("ID         Name           Age          Department          Salary\n")
-    print('-'*70,'\n')
-    for i,j in dict.items():
-        print(i,"\t  ",j['name'],"\t ",j['age'],"\t      ",j['department'],"\t\t  ",j['salary'])
+
+    print(f"{'ID':<10} {'Name':<20} {'Age':<10} {'Department':<20} {'Salary':<10}")
+    print('-' * 70)
+    for emp_id, data in dict.items():
+        print(f"{emp_id:<10} {data['name']:<15} {data['age']:<10} {data['department']:<20} {data['salary']:<10}")
 
 
 def search_employee():
@@ -51,19 +51,19 @@ def search_employee():
 ans = input('enter your choice -> ')
 while(ans.lower() != 'exit' and ans != '4'):
 
-    if(ans == '1'):
+    if(ans.lower() == 'add employee' or ans == '1'):
         print()
         add_emp()
 
-    elif(ans == '2'):
+    elif(ans.lower() == 'view all employees' or ans == '2'):
         print()
         view_employees()
 
-    elif (ans == '3'):
+    elif (ans.lower() == 'search for employee' or ans == '3'):
         print()
         search_employee()
 
-    elif (ans == '4'):
+    elif (ans.lower == 'exit' or ans == '4'):
         print("thank-you")
         exit()
 
