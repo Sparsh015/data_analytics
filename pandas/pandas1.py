@@ -13,4 +13,3 @@ print(data1)
 #read from excel file
 data2 = pd.read_excel("D:/Python/data_analytics/IIT_R UNGA.xlsx")
 print(data2)
-
